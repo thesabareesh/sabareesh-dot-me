@@ -4,19 +4,19 @@ This is the source code to my online portfolio, www.sabareesh.me
 
 
 
-##Fonts:
+## Fonts:
 
 * Roboto Condensedt - https://www.google.com/fonts#UsePlace:use/Collection:Roboto+Condensed  
 * Roboto - https://www.google.com/fonts#UsePlace:use/Collection:Roboto  
 * Font Awesome - http://fortawesome.github.io/Font-Awesome/  
 * Themify Icons - http://themify.me/themify-icons  
 
-##Libraries:
+## Libraries:
 
 * jQuery - http://jquery.com/  
 * Bootstrap 3 - http://getbootstrap.com/  
 
-##Plugins:
+## Plugins:
 
 * Appear - http://morr.github.io/appear.html  
 * Easing - http://gsgd.co.uk/sandbox/jquery/easing/  
