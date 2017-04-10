@@ -2,7 +2,7 @@
 
 File:           JS Core
 Version:        1.3
-Last change:    03/03/17 
+Last change:    03/03/17
 Author:         Sabareesh
 
 -------------------------------------------------------------------------------- */
@@ -13,7 +13,7 @@ var Mi = {
     init: function() {
 
         this.Basic.init();
-        this.Components.init();  
+        this.Components.init();
 
     },
     Basic: {
@@ -68,13 +68,13 @@ var Mi = {
         },
         backgrounds: function() {
 
-            // Images 
+            // Images
             $('.bg-image').each(function(){
                 var src = $(this).children('img').attr('src');
                 $(this).css('background-image','url('+src+')').children('img').hide();
             });
 
-            // Slideshow 
+            // Slideshow
             $('.bg-slideshow').owlCarousel({
                 singleItem: true,
                 autoPlay: 4000,
@@ -89,7 +89,7 @@ var Mi = {
 
         },
         animations: function() {
-            // Animation - hover 
+            // Animation - hover
             $('.animated-hover')
                 .on('mouseenter', function(){
                     var animation = $(this).data('hover-animation');
@@ -103,12 +103,12 @@ var Mi = {
                     var $self = $(this);
                     var animation = $(this).data('hover-animation');
                     var duration = $(this).data('hover-animation-duration');
-                    $(this).stop().removeAttr('style').removeClass(animation); 
+                    $(this).stop().removeAttr('style').removeClass(animation);
                 });
 
-            // Animation - appear 
+            // Animation - appear
             $('.animated').appear(function() {
-                $(this).each(function(){ 
+                $(this).each(function(){
                     var $target =  $(this);
                     var delay = 200 + $(this).data('animation-delay');
                     setTimeout(function() {
@@ -207,18 +207,18 @@ var Mi = {
                     $('html').addClass('locked-scrolling');
                 });
             }
-            
+
             function loadContent() {　
                $ajaxModal.load(toLoad);
         　  }
-            
+
             $('[data-target="ajax-modal"]').on('click', function() {
                 isAjaxModal = true;
                 offsetTop = $(document).scrollTop();
                 toLoad = $(this).attr('href');　
                 loadContent();
                 $('body').addClass('ajax-modal-opened');
-                return false; 
+                return false;
             });
 
             $(document).ajaxStart(function() {
@@ -256,13 +256,13 @@ var Mi = {
 
                 var $googleMap = $('#google-map');
 
-                var yourLatitude = $googleMap.data('latitude');   
-                var yourLongitude = $googleMap.data('longitude');  
-                var pickedStyle = $googleMap.data('style');     
+                var yourLatitude = $googleMap.data('latitude');
+                var yourLongitude = $googleMap.data('longitude');
+                var pickedStyle = $googleMap.data('style');
                 var dark = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
                 var light = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
 
-                var pickedStyle = $googleMap.data('style');   
+                var pickedStyle = $googleMap.data('style');
                 var myOptions = {
                     zoom: 14,
                     center: new google.maps.LatLng(yourLatitude,yourLongitude-0.03),
@@ -285,9 +285,9 @@ var Mi = {
                     map: map,
                     icon: image
                 });
-            
+
             }
-            
+
             google.maps.event.addDomListener(window, 'load', mapInitialize);
 
         },
@@ -295,7 +295,7 @@ var Mi = {
 
             var $formAlert, $formError;
 
-            // Basic Form 
+            // Basic Form
 
             var $basicForm  = $('.basic-form');
             $basicForm.validate({
@@ -310,8 +310,8 @@ var Mi = {
             // Contact Form
 
             var $contactForm  = $('#contact-form');
-            
-    
+
+
             $contactForm.validate({
                 errorElement: 'span',
                 errorContainer: $contactForm.find('.form-error'),
@@ -346,19 +346,19 @@ var Mi = {
                     }
                 }
             });
-        
+
             $contactForm.submit(function() {
                 setProgressCursor();
                 $('.btn').css( 'cursor', 'wait' );
                 $formAlert = $(this).find('.form-alert');
                 $formError = $(this).find('.form-error');
-                
+
                 var response;
-                
+
                 response = '<div class="alert alert-success">Done!  Thank you for the message - I will respond as fast as possible!';
-                
+
                 $formAlert.hide().html();
-                if ($contactForm.valid()){  
+                if ($contactForm.valid()){
                     event.preventDefault();
                     $.ajax({
                      url: "https://www.enformed.io/ll1xdsax",
@@ -380,18 +380,18 @@ var Mi = {
                             $formAlert.show();
                              setDefaultCursor();
                             $('.btn').css( 'cursor', 'pointer' );
-                             
+
                         }
                      });
                 }
-                
+
                /* $formAlert = $(this).find('.form-alert');
                 $formError = $(this).find('.form-error');
                 var response;
-            
+
                 $formAlert.hide().html();
                 if ($contactForm.valid()){
-                    
+
                     $.ajax({
                         type: "POST",
                         url: "assets/php/contact-form.php",
@@ -407,23 +407,23 @@ var Mi = {
                             $formAlert.show();
                         }
                      });
-                    
+
                     return false;
                 }
-                
+
                 return false;*/
             });
 
         }
     },
     Components: {
-        init: function() {  
+        init: function() {
 
-            this.carousel();   
-            this.modal(); 
+            this.carousel();
+            this.modal();
             this.chart();
             this.progressBar();
-            this.tooltip(); 
+            this.tooltip();
             this.popover();
             this.messenger();
             this.videoPlayer();
@@ -443,12 +443,12 @@ var Mi = {
 
             $('#mapModal').on('shown.bs.modal', function () {
                 google.maps.event.trigger(map, 'resize');
-            }); 
+            });
 
         },
         chart: function() {
 
-            $('.chart').each(function(){ 
+            $('.chart').each(function(){
 
                 var size = $(this).data('size');
 
@@ -487,7 +487,7 @@ var Mi = {
 
             $('.progress-animated').appear(function() {
                 var $bar = $(this).find('.progress-bar');
-                $bar.each(function(){ 
+                $bar.each(function(){
                     setTimeout(function() {
                         var value = $bar.attr('aria-valuenow');
                         var i=0;
@@ -529,7 +529,7 @@ var Mi = {
             if(trueMobile && $videoPlayer.hasClass('bg-video')) {
                 $videoPlayer.prev('.bg-video-placeholder').show();
                 $videoPlayer.remove()
-            } 
+            }
         },
         messenger: function() {
             $('[data-target="messenger"]').on('click',function(){
@@ -581,10 +581,10 @@ function setProgressCursor(){
 $(document).ready(function (){
 
     Mi.init();
-    /*--- 
+    /*---
     ----Marvel code start---
-    */ 
-    
+    */
+
     var marvelHeight="600";
     var marvelWidth="290";
     var popMoviesEmbed='<iframe src="https://marvelapp.com/25ib2bi?emb=1" width='+marvelWidth+' height='+marvelHeight+' allowTransparency="true" onload="setDefaultCursor();" frameborder="0"></iframe>';
@@ -595,14 +595,14 @@ $(document).ready(function (){
     $("#home_avatar").click(function (){
         $(document).scrollTop();
     });
-        
+
     $('#hercRentals').click(function(){
         setProgressCursor();
         $('#myModal').empty();
         $(hercRentalEmbed).appendTo('#myModal');
         $('#myModal').modal({show:true});
-        
-       
+
+
     });
 
     $('#popMovies').click(function(){
@@ -610,8 +610,8 @@ $(document).ready(function (){
         $('#myModal').empty();
         $(popMoviesEmbed).appendTo('#myModal');
         $('#myModal').modal({show:true});
-        
-       
+
+
     });
 
     $('#stockHawk').click(function(){
@@ -619,7 +619,7 @@ $(document).ready(function (){
         $('#myModal').empty();
         $(stockHawkEmbed).appendTo('#myModal');
         $('#myModal').modal({show:true});
-       
+
     });
 
     $('#sunshine').click(function(){
@@ -627,15 +627,15 @@ $(document).ready(function (){
         $('#myModal').empty();
         $(sunshineEmbed).appendTo('#myModal');
         $('#myModal').modal({show:true});
-       
-    }); 
+
+    });
 
     $('#xyzReader').click(function(){
         setProgressCursor();
         $('#myModal').empty();
         $(xyzEmbed).appendTo('#myModal');
         $('#myModal').modal({show:true});
-       
+
     });
 
     /* blur on modal open, unblur on close */
@@ -647,4 +647,3 @@ $(document).ready(function (){
        $('body').children().not($('#myModal')).removeClass("blur");
     });
 });
-
