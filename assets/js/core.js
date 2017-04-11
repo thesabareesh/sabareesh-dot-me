@@ -348,6 +348,8 @@ var Mi = {
             });
 
             $contactForm.submit(function() {
+              var btn = document.activeElement.getAttribute('id') ;
+              if(btn==="submit"){
                 setProgressCursor();
                 $('.btn').css( 'cursor', 'wait' );
                 $formAlert = $(this).find('.form-alert');
@@ -383,6 +385,8 @@ var Mi = {
 
                         }
                      });
+              }
+
                 }
 
                /* $formAlert = $(this).find('.form-alert');
