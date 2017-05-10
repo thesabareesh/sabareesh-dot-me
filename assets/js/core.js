@@ -363,7 +363,7 @@ var Mi = {
                 if ($contactForm.valid()){
                     event.preventDefault();
                     $.ajax({
-                     url: "https://www.enformed.io/ll1xdsax",
+                     url: "https://www.enformed.io/ll1xdsa",
                         method: "post",
                         dataType: "json",
                         accepts: "application/json",
