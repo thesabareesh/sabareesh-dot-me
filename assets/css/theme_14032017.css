@@ -548,6 +548,7 @@ Table of Contents:
 		-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
 		-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
 		box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+		background-color: white;
 	}
 
 	.header-horizontal #header > * { line-height: 85px; }
@@ -646,6 +647,9 @@ Table of Contents:
 	}
 
 	/* Resume */
+	#resume{display: none!important;}
+	#portfolio{display: none!important;}
+
 
 	.resume-box { margin-bottom: 50px; }
 	.skill { margin-bottom: 24px; }
@@ -834,7 +838,7 @@ Table of Contents:
 
 	/* Post Item */
 
-	#posts{/*display: none!important;*/ }
+	#posts{display: none!important; }
 	.post { margin-bottom: 30px; }
 
 	.post .post-content {
@@ -1274,7 +1278,7 @@ Table of Contents:
 	.text-purple { color: #8566b5; }
 	.text-purple-navy { color: #352a47; }
 
-	.text-muted { color: #888888; }
+	.text-muted { color: #000000; }
 	.text-muted-2x { color: #b7b7b7; }
 	.dark .text-muted { color: rgba(255,255,255,0.6); }
 	.dark .text-muted-2x { color: rgba(255,255,255,0.4); }
@@ -1751,6 +1755,8 @@ Table of Contents:
 	-------------------------------------------- */
     
 	#testimonials{display: none!important; }
+	#contact{display: none!important;}
+
 
 	.testimonial {
 		margin-bottom: 45px;
@@ -2248,7 +2254,7 @@ Table of Contents:
 		/* Basic */
 		.v-center-items { display: block; }
 		.v-center, .v-bottom { top: 0; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); }
-		.fullheight { height: auto; }
+		/* .fullheight { height: auto; } */
 
 		.header-vertical .section { padding-left: 0px; }
 
